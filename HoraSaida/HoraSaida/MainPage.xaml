@@ -1,0 +1,34 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d"
+             x:Class="HoraSaida.MainPage">
+
+    <StackLayout VerticalOptions="FillAndExpand" Padding="20.0"  >
+
+        <Label Text="Calculadora de Horário de Saída" HorizontalOptions="CenterAndExpand" LineHeight="30.0" FontAttributes="Bold" FontSize="20.0"></Label>
+        <Label Text="Digite os horários:" 
+           HorizontalOptions="Center"
+           VerticalOptions="Start" />
+
+        <Label Text="Carga horária:"></Label>
+        <Entry x:Name="tpCargaHoraria" Keyboard="Numeric" MaxLength="3"></Entry>
+
+        <Label Text="Entrada:"></Label>
+        <TimePicker x:Name="tpEntrada"></TimePicker>
+        <Label Text="Saída almoço / intervalo:"></Label>
+        <TimePicker x:Name="tpSaidaAlmoco"></TimePicker>
+        <Label Text="Retorno almoço / intervalo:"></Label>
+        <TimePicker x:Name="tpRetornoAlmoco"></TimePicker>
+        <Label Text="Saída:"></Label>
+        <TimePicker x:Name="tpSaida" IsEnabled="False"></TimePicker>
+        
+        <Button Clicked="Button_Clicked" Text="Calcular" VerticalOptions="Start" ></Button>
+        <Button x:Name="btnReset" Text="Resetar" Clicked="btnReset_Clicked" VerticalOptions="Start"></Button>
+
+        <Label Text="Desenvolvido por Lights Out RSC Software" VerticalOptions="EndAndExpand"></Label>
+    </StackLayout>
+
+</ContentPage>
