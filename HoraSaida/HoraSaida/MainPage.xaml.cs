@@ -15,25 +15,5 @@ namespace HoraSaida
             InitializeComponent();
             this.BindingContext = new MainPageViewModel();
         }
-
-        //private void Button_Clicked(object sender, EventArgs e)
-        //{
-        //    if (!EhValido())
-        //        return;
-
-        //    var diaSaidaAlmoco = (tpSaidaAlmoco.Time < tpEntrada.Time) ? 2 : 1;
-        //    var entrada = new DateTime(2020, 1, 1, tpEntrada.Time.Hours, tpEntrada.Time.Minutes, 0);
-        //    var saidaAlmoco = new DateTime(2020, 1, diaSaidaAlmoco, tpSaidaAlmoco.Time.Hours, tpSaidaAlmoco.Time.Minutes, 0);
-        //    var primeiroIntervalo = saidaAlmoco - entrada;
-        //    var cargaHoraria = ObterCargaHoraria();
-        //    tpSaida.Time = tpRetornoAlmoco.Time.Add(TimeSpan.FromHours(cargaHoraria) - primeiroIntervalo);
-        //}
-
-
-
-        //private void btnReset_Clicked(object sender, EventArgs e)
-        //{
-        //    SetarHorariosPadrao();
-        //}
     }
 }
