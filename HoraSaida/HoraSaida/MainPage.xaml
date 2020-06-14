@@ -13,20 +13,23 @@
            HorizontalOptions="Center"
            VerticalOptions="Start" />
 
+        <Label Text="{Binding MensagemValidacao}" IsVisible="{Binding Invalido}"
+               TextColor="Red"></Label>
+
         <Label Text="Carga horária:"></Label>
-        <Entry x:Name="tpCargaHoraria" Keyboard="Numeric" MaxLength="3"></Entry>
+        <Entry Text="{Binding CargaHoraria}" Keyboard="Numeric" MaxLength="3"></Entry>
 
         <Label Text="Entrada:"></Label>
-        <TimePicker x:Name="tpEntrada"></TimePicker>
+        <TimePicker Time="{Binding Entrada}"></TimePicker>
         <Label Text="Saída almoço / intervalo:"></Label>
-        <TimePicker x:Name="tpSaidaAlmoco"></TimePicker>
+        <TimePicker Time="{Binding SaidaAlmoco}" ></TimePicker>
         <Label Text="Retorno almoço / intervalo:"></Label>
-        <TimePicker x:Name="tpRetornoAlmoco"></TimePicker>
+        <TimePicker Time="{Binding RetornoAlmoco}"></TimePicker>
         <Label Text="Saída:"></Label>
-        <TimePicker x:Name="tpSaida" IsEnabled="False"></TimePicker>
-        
-        <Button Clicked="Button_Clicked" Text="Calcular" VerticalOptions="Start" ></Button>
-        <Button x:Name="btnReset" Text="Resetar" Clicked="btnReset_Clicked" VerticalOptions="Start"></Button>
+        <TimePicker Time="{Binding Saida}" IsEnabled="False"></TimePicker>
+
+        <Button Command="{Binding CalculaHoraSaidaCommand}" Text="Calcular" VerticalOptions="Start" ></Button>
+        <Button x:Name="btnReset" Text="Resetar" Command="{Binding RestaurarCommand}" VerticalOptions="Start"></Button>
 
         <Label Text="Desenvolvido por Lights Out RSC Software" VerticalOptions="EndAndExpand"></Label>
     </StackLayout>
